@@ -1,24 +1,31 @@
 package com.cs.foodapp;
 
+import java.util.ArrayList;
+
 public class Food {
 
-    private int img;
+    private String img;
     private String name;
     private String description;
     private int price;
+  static ArrayList<Food> foods = new ArrayList<>();
 
-    public Food(int img, String name, String description, int price) {
+    public Food(String img, String name, String description, int price) {
         this.img = img;
         this.name = name;
         this.description = description;
         this.price = price;
     }
 
-    public int getImg() {
+    public Food() {
+
+    }
+
+    public String getImg() {
         return img;
     }
 
-    public void setImg(int img) {
+    public void setImg(String img) {
         this.img = img;
     }
 
@@ -46,7 +53,15 @@ public class Food {
         this.price = price;
     }
 
- private static Food [] food={
+    public ArrayList<Food> getFoods() {
+        return foods;
+    }
+
+    public void setFoods(ArrayList<Food> foods) {
+        this.foods = foods;
+    }
+
+    /*private static Food [] food={
             new Food(R.drawable.img1,"Cheese Sandwich","Cheese,Tomato,Cucumber,Lettuce,Basil,Pesto Sauce",16),
          new Food(R.drawable.img2,"Avocado Sandwich","Avocado, Cucumber, Tomato, Mushroom, Lettuce, Fitafe Sauce",16),
          new Food(R.drawable.img3,"Smoked Salmon Sandwich","Greek Yogurt, Salmon, Augula,Tomato, Purple Onion",30),
@@ -57,12 +72,9 @@ public class Food {
          new Food(R.drawable.img8,"Crazy Tabouleh","Lettuce, Parsley, Apple, lentils, Quinoa, Pomegranate, Walnuts, Cranberry",20),
          new Food(R.drawable.img9,"Chicken Sandwich","Chicken Breast, Lettuce, Cucumber, Tomato, Fitafe Vinaigrette Sauce",22),
 new Food(R.drawable.img10,"Fajita Chicken Sandwich","Grilled Chicken With Onions&Bell peppers,Soy Sauce",24)
- };
+ };*/
 
 
-public static Food [] getFood()
-{
-    return food;
-}
+
 
 }

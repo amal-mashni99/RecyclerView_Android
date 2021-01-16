@@ -14,17 +14,26 @@ import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
+import java.util.List;
+
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder> {
 
-   private int [] img;
-    private String [] name;
+ //  private int [] img;
+   // private String [] name;
+ private List<Food> foods;
 
-
-    public CustomAdapter(int[] img, String[] name) {
+   /* public CustomAdapter(int[] img, String[] name) {
         this.img = img;
         this.name = name;
 
-    }
+    }*/
+   public CustomAdapter(List<Food> foods) {
+       this.foods = foods;
+
+
+   }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
@@ -40,12 +49,18 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
         final CardView card= viewHolder.cardView;
         ImageView imgv= card.findViewById(R.id.img);
 
-        Drawable dr = ContextCompat.getDrawable(card.getContext(),img[position]);
+        //Food food = foods.get(position);
 
-        imgv.setImageDrawable(dr);
+        //loading the image
+        Glide.with(card)
+               .load(foods.get(position).getImg())
+                .into(imgv);
+   // Drawable dr = ContextCompat.getDrawable(card.getContext(), R.drawable.img1);
+
+   // imgv.setImageDrawable(dr);
 
         final TextView text= card.findViewById(R.id.name);
-        text.setText(name[position]);
+        text.setText(foods.get(position).getName());
 
         card.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +74,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.ViewHolder
     }
     @Override
     public int getItemCount() {
-        return name.length;
+        return foods.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

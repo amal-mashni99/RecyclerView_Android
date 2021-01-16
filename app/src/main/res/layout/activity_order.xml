@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".OrderActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amita"
+            android:paddingLeft="30dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="30dp"
+            android:text="Item Name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#101010"
+            android:textSize="22sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="222dp"
+            android:layout_height="30dp"
+            android:background="#EDE6E6"
+            android:hapticFeedbackEnabled="true"
+            android:isScrollContainer="false"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amita"
+            android:paddingLeft="30dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="30dp"
+            android:text="Item Price"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#101010"
+            android:textSize="22sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="221dp"
+            android:layout_height="30dp"
+            android:background="#EDE6E6"
+            android:hapticFeedbackEnabled="true"
+            android:isScrollContainer="false"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="144dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amita"
+            android:paddingLeft="30dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="30dp"
+            android:text="count"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#101010"
+            android:textSize="22sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="222dp"
+            android:layout_height="30dp"
+            android:background="#EDE6E6"
+            android:hapticFeedbackEnabled="true"
+            android:isScrollContainer="false"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="141dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amita"
+            android:paddingLeft="30dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="30dp"
+            android:text="total"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#101010"
+            android:textSize="22sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/total"
+            android:layout_width="222dp"
+            android:layout_height="30dp"
+            android:background="#EDE6E6"
+            android:hapticFeedbackEnabled="true"
+            android:isScrollContainer="false"></TextView>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/myLocationText"
+        android:layout_height="wrap_content"
+        android:textSize="16pt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="59dp" />
+
+    <Button
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#4CAF50"
+        android:fontFamily="@font/amita"
+        android:text="Get my location"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#0B0B0B">
+
+    </Button>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="33dp" />
+
+
+</LinearLayout>
